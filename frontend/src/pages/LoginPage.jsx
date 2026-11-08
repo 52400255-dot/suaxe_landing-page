@@ -34,7 +34,7 @@ export default function LoginPage() {
       } else if (userData.role === 'warehouse_staff') {
         navigate('/inventory');
       } else {
-        navigate('/');
+        navigate('/dashboard');
       }
     } catch (err) {
       setError(err.response?.data?.message || 'Email hoặc mật khẩu không chính xác (mặc định demo: 123456)');
