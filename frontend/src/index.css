@@ -7,22 +7,22 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --charcoal: #242b2d;
-  --graphite: #354143;
-  --warm-white: #f6f5f1;
-  --paper: #fffefa;
-  --steel-gray: #899493;
-  --orange: #d78355;
-  --orange-hover: #e39b74;
-  --orange-ink: #8e4d2c;
-  --muted-red: #b85f59;
-  --olive: #5e8068;
+  --charcoal: #f3f3f4;
+  --graphite: #1a1c22;
+  --warm-white: #0b0c0f;
+  --paper: #15171d;
+  --steel-gray: #7f858f;
+  --orange: #ed1c2b;
+  --orange-hover: #ff3947;
+  --orange-ink: #ff626d;
+  --muted-red: #f0646e;
+  --olive: #6eb886;
   --text: var(--charcoal);
-  --text-secondary: #606a68;
-  --text-dark-secondary: #d1d6d3;
-  --border: #e7e4dc;
-  --border-dark: #465052;
-  --sidebar: var(--charcoal);
+  --text-secondary: #a4a7af;
+  --text-dark-secondary: #c1c4ca;
+  --border: #2b2e36;
+  --border-dark: #30343c;
+  --sidebar: #111318;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -52,9 +52,9 @@
   --sidebar-width: 240px;
   --radius: 12px;
   --radius-card: 20px;
-  --shadow-card: 0 10px 28px rgba(36, 43, 45, .055);
-  --shadow-raised: 0 16px 38px rgba(36, 43, 45, .1);
-  --modal-shadow: 0 20px 60px rgba(36, 43, 45, .18);
+  --shadow-card: 0 10px 28px rgba(0, 0, 0, .26);
+  --shadow-raised: 0 16px 38px rgba(0, 0, 0, .36);
+  --modal-shadow: 0 20px 60px rgba(0, 0, 0, .58);
 }
 
 * { box-sizing: border-box; }
@@ -1564,3 +1564,123 @@ th, td {
   .landing-feature-card, .landing-feature-card + .landing-feature-card { padding-left: 0; }
   .landing-feature-card + .landing-feature-card { border-color: #303239; }
 }
+
+/* Shared carbon and racing-red colors for the application screens */
+::selection { color: #fff; background: var(--orange); }
+
+.app-sidebar {
+  color: var(--charcoal);
+  background: linear-gradient(180deg, #15171d 0%, #0b0c0f 100%);
+  box-shadow: 8px 0 28px rgba(0, 0, 0, .36);
+}
+
+.sidebar-brand-copy span, .sidebar-user strong { color: var(--charcoal); }
+.sidebar-group-label { color: var(--steel-gray); }
+.sidebar-link:hover, .sidebar-link.is-active { color: var(--charcoal); }
+.sidebar-link:hover { background: var(--graphite); }
+.sidebar-link.is-active { background: rgba(237, 28, 43, .14); box-shadow: inset 3px 0 var(--orange); }
+.sidebar-logout, .sidebar-logout:hover:not(:disabled) {
+  color: #fff;
+  background: var(--orange);
+  border-color: var(--orange);
+  box-shadow: 0 6px 18px rgba(237, 28, 43, .24);
+}
+.app-topbar {
+  background: rgba(11, 12, 15, .94);
+  border-bottom-color: var(--border);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, .22);
+}
+.app-main { background: var(--warm-white); }
+.user-avatar { color: #fff; background: var(--graphite); }
+.sidebar-backdrop, .modal-backdrop { background: rgba(0, 0, 0, .72); }
+
+.btn-primary { box-shadow: 0 6px 18px rgba(237, 28, 43, .2); }
+.btn-primary:hover:not(:disabled) { color: #fff; background: var(--orange-hover); border-color: var(--orange-hover); }
+.btn-success { color: #fff; }
+.btn-warning { color: #fff; }
+
+.form-control, input:not([type='checkbox']):not([type='radio']), select, textarea {
+  color: var(--charcoal);
+  background: var(--paper);
+  border-color: var(--border);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, .2);
+}
+.form-control:focus, input:not([type='checkbox']):not([type='radio']):focus, select:focus, textarea:focus {
+  background: var(--paper);
+  border-color: var(--orange);
+  outline-color: color-mix(in srgb, var(--orange) 28%, transparent);
+  box-shadow: 0 4px 14px rgba(237, 28, 43, .12);
+}
+.form-control::placeholder, input::placeholder, textarea::placeholder { color: var(--steel-gray); }
+.card, .legacy-panel, .warning-card, .stat-card, .dashboard-stats-four .stat-card,
+.repair-overview-cards > article, .task-metric-card, .job-card,
+.dashboard-progress-card, .dashboard-stock-card, .task-progress-panel, .task-parts-panel,
+.reception-main-panel, .reception-summary, .login-panel {
+  border-color: var(--border);
+}
+.modal-panel, .dialog-role-change { border-color: var(--border); }
+.modal-header, .modal-actions { border-color: var(--border); }
+.dialog-role-change::backdrop, dialog.modal-panel::backdrop { background: rgba(0, 0, 0, .72); }
+thead th { background: color-mix(in srgb, var(--warm-white) 55%, var(--paper)); }
+tbody tr:hover td { background: color-mix(in srgb, var(--graphite) 65%, var(--paper)); }
+
+.login-showcase {
+  color: var(--charcoal);
+  background: linear-gradient(145deg, #17191f 0%, #0b0c0f 100%);
+}
+.login-brand strong, .login-story h1, .workflow-copy strong { color: var(--charcoal); }
+.login-panel-wrap { background: radial-gradient(ellipse at 78% 25%, rgba(237, 28, 43, .1), transparent 52%); }
+.login-panel { background: var(--paper); border-color: var(--border); }
+.login-panel .eyebrow, .login-mode-toggle button, .demo-tag { color: var(--orange-ink); }
+.demo-access { border-top-color: var(--border); }
+.demo-access-heading, .demo-password strong { color: var(--charcoal); }
+.demo-account { color: var(--charcoal); background: var(--graphite); border-color: var(--border); }
+.demo-account:hover { background: #23262e; border-color: var(--orange); }
+
+.dashboard-welcome {
+  color: var(--charcoal);
+  background: linear-gradient(120deg, #17191f, #0e1014);
+  border-color: var(--border);
+  border-left-color: var(--orange);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .32);
+}
+.dashboard-welcome h2 { color: var(--charcoal); }
+.dashboard-welcome-kicker { color: var(--orange-ink); }
+.dashboard-welcome p { color: var(--text-dark-secondary); }
+.stat-card, .dashboard-stats-four .stat-card, .repair-overview-cards > article, .task-metric-card {
+  background: var(--paper);
+  border-color: var(--border);
+}
+.dashboard-stock-list li, .task-used-parts-list li, .service-picker, .estimate-part-picker,
+.job-detail-block, .demo-account { background: var(--graphite); }
+.dashboard-stock-link, .dashboard-stock-list li, .task-used-parts-list li { border-color: var(--border); }
+.dot-working, .task-dot-diagnosis, .task-dot-repair, .work-progress-bars .is-current { background: var(--orange); border-color: var(--orange); }
+.reception-stepper > i { background: var(--border); }
+.reception-step.is-active > span { color: #fff; background: var(--orange); border-color: var(--orange); }
+.reception-step.is-complete > span { color: #fff; }
+.reception-step.is-active strong, .reception-step.is-complete strong { color: var(--charcoal); }
+.repair-status-tab, .filter-tab { color: var(--text-secondary); background: var(--graphite); border-color: var(--border); }
+.repair-status-tab:hover, .filter-tab:hover { color: var(--charcoal); background: #23262e; }
+.repair-status-tab.is-active, .filter-tab.is-active {
+  color: var(--charcoal);
+  background: color-mix(in srgb, var(--orange) 14%, var(--graphite));
+  border-color: var(--orange);
+}
+.repair-search { color: var(--text-secondary); background: var(--paper); border-color: var(--border); }
+.stock-alert-panel, .warning-card { border-color: var(--border); }
+.stock-alert-panel, .warning-card, .warning-tag, .warning-card strong { border-left-color: var(--muted-red); }
+.portal-vehicle-heading, .portal-estimate-total, .reception-panel-heading,
+.reception-summary-heading, .reception-summary-section, .reception-estimate-total { border-color: var(--border); }
+.estimate-total-banner { color: var(--charcoal); background: color-mix(in srgb, var(--orange) 14%, var(--paper)); }
+.toast-notice { background: var(--paper); border-color: var(--border); }
+.btn-success:hover:not(:disabled) { color: #fff; background: color-mix(in srgb, var(--olive) 86%, #0b0c0f); }
+.btn-danger:hover:not(:disabled) { color: #fff; background: var(--muted-red); border-color: var(--muted-red); }
+th, td { border-bottom-color: var(--border); }
+thead th { border-bottom-color: var(--border); }
+.record-count, .reception-step, .service-picker, .estimate-part-picker, .repair-search,
+.repair-queue-card, .job-card, .demo-account, .login-panel, .stock-alert-panel,
+.warning-card, .portal-vehicle-card, .portal-estimate-card { border-color: var(--border); }
+.reception-panel-heading, .reception-summary-heading, .portal-vehicle-heading,
+.reception-summary-section, .reception-estimate-total, .portal-estimate-total,
+.dashboard-stock-link, .repair-queue-toolbar, .repair-queue-heading { border-color: var(--border); }
+.warning-tag, .warning-card strong, .stock-count { color: var(--muted-red); }
